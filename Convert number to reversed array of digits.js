@@ -1,5 +1,10 @@
 function digitize(n) {
-    const reversedArray = String(n).split("").reverse().map(Number)
-    console.log(typeof  reversedArray)
+    let myString = String(n).split("").map(Number)
+    let reverseArr = myString.reverse()
+    
+    console.log(reverseArr);
+    
 }
+
 digitize(35231)
+
