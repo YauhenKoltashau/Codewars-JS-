@@ -1,20 +1,32 @@
 function isNice(arr){
-    for (let i of arr) {
-        if ((i - 1) in arr || (i + 1 in arr)) {
-            return console.log(true)
-        } else {
-            return console.log(false)
-        }
-        console.log(i)
-    }
-    // if ((i + 1) in arr || (i - 1) in arr) {
-    //     return true
-    // } else {
-    //     return false
-    // }    
-  }
-  
+    const checkArr = []
+    if (arr.length > 1) {
 
-  isNice([2,10,9,3])
-  isNice([3,4,5,7])
+        for (let i of arr) {
+            if ((arr.includes(i - 1)) || (arr.includes(i + 1))) {
+                checkArr.push(true)
+            } else {
+                checkArr.push(false)
+            }
+        }
+        if (checkArr.includes(false)) {
+            return false
+        } else {
+            return true
+        }
+    }else {
+        return false
+    }
+    
+
+
+}
+console.log(isNice([2,10,9,3]))
+console.log(isNice([3,4,5,7]))
+console.log(isNice([1,2,3,4]))
+console.log(isNice([2,10,9,3]))
+console.log(isNice([2,1]))
+console.log(isNice([1]))
+console.log(isNice([]))
+
   

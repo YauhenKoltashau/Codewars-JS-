@@ -1,14 +1,12 @@
 function nbDig(n, d) {
-    var arrNum = [];
-    if (d <= n) {
-       let currentNum = d * d;
-       console.log(currentNum)
-       arrNum.push(currentNum)
-       let currentString = currentNum.toString() 
-       //console.log(`${d} ${currentNum} ${currentString}`)
-       nbDig(n, d + 1)
-    
-  }return arrNum
+    var numCounter = 0;
+    for (let k = 0; k <= n; k++) {
+        for (let item of (k * k).toString()) {
+            if (item.includes(d)) {
+                numCounter++
+            }           
+        }        
+    }return numCounter
 }
-console.log(nbDig(10, 1))
+console.log(nbDig(11549, 1))
 
