@@ -21,15 +21,15 @@ function well(x){
   }
 }
 const well = x => {
-  const good_count = x.filter(x => x == 'good').length;
-  return good_count < 1 ? 'Fail!' : 
-         good_count < 3 ? 'Publish!' : 'I smell a series!';
-}
+   const good_count = x.filter(x => x == 'good').length;
+   return good_count < 1 ? 'Fail!' : 
+          good_count < 3 ? 'Publish!' : 'I smell a series!';
+ }
 
-function well(x) {
-  const count = x.reduce((s, v) => s + (v == 'good'), 0);
-  return count ? count > 2 ? 'I smell a series!' : 'Publish!' : 'Fail!';
-}
+ function well(x) {
+   const count = x.reduce((s, v) => s + (v == 'good'), 0);
+   return count ? count > 2 ? 'I smell a series!' : 'Publish!' : 'Fail!';
+ }
 
 const well = x => x.includes('good') ? x.filter(s => s == 'good').length < 3 ? 'Publish!' : 'I smell a series!' : 'Fail!';
 
